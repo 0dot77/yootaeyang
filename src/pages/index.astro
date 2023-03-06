@@ -1,5 +1,9 @@
 ---
-import '@fontsource/noto-sans-kr';
+import "../styles/global.css";
+import Footer from "../components/main-page/Footer.astro";
+import Main from "../components/main-page/Main.astro";
+
+const linkHoverState = false;
 ---
 
 <html lang="kr">
@@ -13,22 +17,12 @@ import '@fontsource/noto-sans-kr';
       name="generator"
       content={Astro.generator}
     />
-    <title>yootaeyang</title>
+    <title>유태양 | YOO TAEYANG</title>
   </head>
-  <body class="min-h-screen flex justify-center items-center">
-    <main class="w-[400px] h-[400px] flex justify-center items-center border-2 border-pink-900">
-      <section class="w-[300px] h-[300px] border-2 border-emerald-800 rounded-full">main</section>
-      <nav class="absolute w-[350px] h-[350px] border-3 border-cyan-700">
-        <svg viewBox="0 0 350 350">
-          <text
-            x="10"
-            y="100"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, obcaecati architecto. Ex, repellat
-            provident illo consequuntur eius sunt voluptatem fuga?
-          </text>
-        </svg>
-      </nav>
-      <div></div>
+  <body class="overflow-hidden">
+    <main>
+      <Main linkHoverState={linkHoverState} />
+      <Footer />
     </main>
   </body>
 </html>
